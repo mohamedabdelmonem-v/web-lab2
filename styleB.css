@@ -1,0 +1,46 @@
+/* Reset default browser margins, padding, and set box-sizing model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure full viewport height */
+html, body {
+    height: 100%;
+}
+
+/* Body setup for horizontal layout without line wrapping */
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 40px;
+    white-space: nowrap; /* Prevents boxes from wrapping to a new line on window resize */
+}
+
+/* Base box styling for Style B */
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    border-left: 10px dotted #D0D0FF; /* 10px dotted left border */
+    margin-right: 10px;               /* 10px separation between boxes */
+    padding: 10px;                    /* 10px space between text and box edge */
+    vertical-align: top;
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition for hover effects */
+}
+
+/* Hover state styling */
+.box:hover {
+    cursor: pointer;          /* Change cursor to hand icon */
+    background-color: yellow; /* Box color changes to yellow */
+    color: goldenrod;         /* Font color changes to goldenrod */
+}
+
+/* Position the last box (F) in the bottom right corner */
+.box.last-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 0;
+}
