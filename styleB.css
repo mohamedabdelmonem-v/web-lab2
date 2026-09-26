@@ -1,46 +1,44 @@
-/* Reset default browser margins, padding, and set box-sizing model */
+/* Reset browser defaults and include padding and borders in element dimensions. */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ensure full viewport height */
-html, body {
-    height: 100%;
-}
-
-/* Body setup for horizontal layout without line wrapping */
+/* Set up a non-wrapping row of boxes. */
 body {
-    font-family: Tahoma, sans-serif;
-    font-size: 40px;
-    white-space: nowrap; /* Prevents boxes from wrapping to a new line on window resize */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: Tahoma, sans-serif;
+  font-size: 40px;
 }
 
-/* Base box styling for Style B */
+/* Style the boxes and keep each one at exactly 100 by 150 pixels. */
 .box {
-    display: inline-block;
-    width: 100px;
-    height: 150px;
-    background-color: #eeeff2;
-    border-left: 10px dotted #D0D0FF; /* 10px dotted left border */
-    margin-right: 10px;               /* 10px separation between boxes */
-    padding: 10px;                    /* 10px space between text and box edge */
-    vertical-align: top;
-    transition: background-color 0.2s, color 0.2s; /* Smooth transition for hover effects */
+  flex: 0 0 100px;
+  width: 100px;
+  height: 150px;
+  padding: 10px;
+  border-left: 10px dotted #D0D0FF;
+  background-color: #eeeff2;
+  vertical-align: top;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-/* Hover state styling */
+/* Change the box and text colors when hovered. */
 .box:hover {
-    cursor: pointer;          /* Change cursor to hand icon */
-    background-color: yellow; /* Box color changes to yellow */
-    color: goldenrod;         /* Font color changes to goldenrod */
+  cursor: pointer;
+  background-color: yellow;
+  color: goldenrod;
 }
 
-/* Position the last box (F) in the bottom right corner */
+/* Keep box F at the bottom-right of the browser window. */
 .box.last-box {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin-right: 0;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }

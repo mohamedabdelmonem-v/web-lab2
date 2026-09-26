@@ -1,50 +1,45 @@
-/* Reset default browser margins, padding, and set box-sizing model */
+/* Reset default browser spacing and use predictable box sizing. */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ensure full viewport height for proper flexbox spacing */
-html, body {
-    height: 100%;
-}
-
-/* Main body styling: Flexbox layout for vertical centering and equal spacing */
+/* Keep the page at least as tall as the viewport. */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; /* Equally space elements vertically */
-    align-items: center;         /* Center elements horizontally */
-    font-family: Tahoma, sans-serif;
-    font-size: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Tahoma, sans-serif;
+  font-size: 40px;
 }
 
-/* Base box styling for Style A */
+/* Style the six boxes and keep their size fixed. */
 .box {
-    width: 100px;
-    height: 100px;
-    border-top: 1px solid #687291; /* 1px line on top */
-    text-align: center;
-    line-height: 100px;           /* Vertically center text in standard boxes */
+  display: flex;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #687291;
+  text-align: center;
 }
 
-/* Alternating background colors for odd and even boxes */
+/* Alternate the background colors. */
 .box:nth-child(odd) {
-    background-color: #dfe1e7;
+  background-color: #dfe1e7;
 }
 
 .box:nth-child(even) {
-    background-color: #eeeff2;
+  background-color: #eeeff2;
 }
 
-/* Specific styling for the final element (Box F) */
+/* Style the final box. */
 .box.last-box {
-    background-color: #687291;
-    border: 4px solid black;      /* 4px solid black border */
-    color: black;
-    display: flex;
-    justify-content: center;       /* Center text horizontally */
-    align-items: center;          /* Center text vertically */
-    line-height: normal;          /* Reset line-height override */
+  border: 4px solid #000;
+  background-color: #687291;
+  color: #000;
 }
