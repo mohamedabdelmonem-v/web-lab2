@@ -13,4 +13,4 @@ This project presents a single HTML document (`index.html`) that changes its vis
 ## Challenges Faced
 1. **Vertical Centering in Flexbox (Style A)**: Ensuring all 6 boxes remained centered horizontally and equally spaced vertically during window resizing without changing size or overlapping.
 2. **Fixed Positioning & Non-wrapping (Style B)**: Preventing elements A through E from wrapping on smaller screens using `white-space: nowrap` while positioning the final box `F` fixed to the bottom right corner of the viewport.
-3. a bit pressure because assignments stack together, from this course additional to other courses , so student has struggle to find enough time to truly understand all these subjects and then master it . thats my openion . 
+3. we need more explaination with live practicing , and step by step moving forwading   
